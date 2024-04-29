@@ -1,0 +1,38 @@
+Informatica PowerCenter architecture is based on client-server architecture. 
+
+PowerCenter server is the basic administrative unit of Informatica, where we configure all the services, create users and assign authentication.
+
+Informatica has a service-oriented architecture that provides the ability to scale services and share resources across multiple machines. 
+Node is a logical representation of the Informatica installation on a server.  
+
+Domain is a collection of nodes and services.
+
+The services like *Integration service and **Repository service are created on domain and assigned to selective node in the domain based on the availability of the resource on that domain.
+The ODBC driver is used to connect the different sources to PowerCenter client
+The final output will be loaded into target with the help of ODBC/Native drivers
+
+*Integration Service is an application service that runs sessions and workflows. Without Integration service you cannot load the data to data warehouse.
+
+**Repository Service manages the repository. It performs all metadata transactions between the repository database and repository clients.
+
+--Parameters in Informatica are constant values (datatypes strings, numbers, etc…).
+--Variables change values within a single session run.
+
+System variables
+SYSDATE  :Provides current datetime on the Informatica server machine.
+
+SESSSTARTTIME: Returns the system date value on the Informatica server.
+
+$$$SessStartTime: Returns the system date value as a string.
+
+Functions to set mapping variables
+SetCountVariable: Counts the number of evaluated rows and increments or decrements the mapping variable for each row.
+
+SetMaxVariable: Evaluates the value of mapping variable to the higher of two values.
+
+SetMinVariable: Evaluates the value of mapping variable to the lower of two values.
+
+SetVariable: Set the value of mapping variable to a specified value.
+
+ 
+
